@@ -27,7 +27,7 @@ class ProviderRepositoryTest extends PHPUnit_Framework_TestCase {
 
 	public function testManifestIsProperlyRecompiled()
 	{
-		$repo = m::mock('Illuminate\Foundation\ProviderRepository[createProvider,loadManifest,writeManifest,shouldRecompile]', array(m::mock('Illumiante\Filesystem')));
+		$repo = m::mock('Illuminate\Foundation\ProviderRepository[createProvider,loadManifest,writeManifest,shouldRecompile]', array(m::mock('Illuminate\Filesystem')));
 		$app = m::mock('Illuminate\Foundation\Application');
 
 		$repo->shouldReceive('loadManifest')->once()->andReturn(array('eager' => array(), 'deferred' => array('deferred')));
